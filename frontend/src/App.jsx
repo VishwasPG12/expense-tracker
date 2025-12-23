@@ -2,22 +2,25 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+const BACKEND_URL = "https://expense-tracker-backend-jz2k.onrender.com";
+
 export default function App() {
   const [expenses, setExpenses] = useState([]);
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/expenses")
-      .then(res => setExpenses(res.data));
+    axios.get(`${BACKEND_URL}/api/expenses`)
+      .then(res => setExpenses(res.data))
+      .catch(err => console.error(err));
   }, []);
 
   const addExpense = async () => {
     if (!name || amount <= 0) return;
 
-    const res = await axios.post("http://localhost:5000/api/expenses", {
+    const res = await axios.post(`${BACKEND_URL}/api/expenses`, {
       name,
-      amount,
+      amount: Number(amount), // ensure amount is a number
     });
 
     setExpenses([...expenses, res.data]);
@@ -26,11 +29,11 @@ export default function App() {
   };
 
   const deleteExpense = async (id) => {
-    await axios.delete(`http://localhost:5000/api/expenses/${id}`);
+    await axios.delete(`${BACKEND_URL}/api/expenses/${id}`);
     setExpenses(expenses.filter(e => e._id !== id));
   };
 
-  const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+  const total = expenses.reduce((sum, e) => sum + Number(e.amount), 0);
 
   return (
     <div className="container">
