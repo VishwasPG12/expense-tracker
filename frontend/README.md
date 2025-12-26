@@ -1,16 +1,27 @@
-# React + Vite
+# Expense Tracker 💸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, clean way to keep track of where your money is going. No complicated charts, no annoying notifications—just a straightforward tool to log your daily spends.
 
-Currently, two official plugins are available:
+**"Cuz every rupee matters."**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why I built this
+I was tired of finance apps that felt like I was looking at a stock market terminal. I wanted something that looked more like a clean Notion page or a modern mobile app. This project was also a good excuse to mess around with **Tailwind CSS v4** and see how the new engine handles minimalist UI.
 
-## React Compiler
+## The Tech
+* **React + Vite**: For a snappy frontend experience.
+* **Tailwind v4**: Used for the "Modern Utility" look (clean borders, lots of white space).
+* **Express & Node**: Simple API to handle the CRUD operations.
+* **MongoDB**: To keep the transaction history persistent.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## The Look
+I skipped the heavy shadows and bright colors. Instead, I used:
+- **Rounded 3xl corners** for a friendly, mobile-app feel.
+- **Zinc/Gray tones** to keep the focus on the numbers.
+- **Subtle hover states** so it feels interactive without being distracting.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to run it
+1. **Clone & Install**
+   ```bash
+   git clone <your-repo-link>
+   cd frontend
+   npm install
