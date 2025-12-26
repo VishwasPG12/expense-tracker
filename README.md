@@ -1,11 +1,11 @@
-# Expense Tracker 💸
+# Expense Tracker
 
 A simple, clean way to keep track of where your money is going. No complicated charts, no annoying notifications—just a straightforward tool to log your daily spends.
 
 **"Cuz every rupee matters."**
 
 ## Why I built this
-I was tired of finance apps that felt like I was looking at a stock market terminal. I wanted something that looked more like a clean Notion page or a modern mobile app. This project was also a good excuse to mess around with **Tailwind CSS v4** and see how the new engine handles minimalist UI.
+I wanted something that looked more like a clean Notion page or a modern mobile app. This project was also a good excuse to mess around with **Tailwind CSS v4** and see how the new engine handles minimalist UI.
 
 ## The Tech
 * **React + Vite**: For a snappy frontend experience.
